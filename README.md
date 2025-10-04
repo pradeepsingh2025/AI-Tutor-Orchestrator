@@ -258,9 +258,9 @@ asyncio.run(test_extraction())
 1. **Update .env**:
 ```bash
 USE_MOCK_TOOLS=false
-NOTE_MAKER_API_URL=https://your-note-maker-api.com/api
-FLASHCARD_API_URL=https://your-flashcard-api.com/api
-CONCEPT_API_URL=https://your-concept-api.com/api
+NOTE_MAKER_API_URL=http://localhost:8001/api/note-maker
+FLASHCARD_API_URL=http://localhost:8002/api/flashcards
+CONCEPT_API_URL=http://localhost:8003/api/concept-explainer
 ```
 
 2. **Add authentication** (if needed):
