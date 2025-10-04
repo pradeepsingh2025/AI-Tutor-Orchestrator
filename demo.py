@@ -114,7 +114,7 @@ class DemoRunner:
         # Use mock tools for demo
         self.tool_client = MockToolClient()
         self.parameter_extractor = ParameterExtractor(
-            model_name="gpt-4",
+            model_name="gpt-4o-mini",  # Using more accessible model
             temperature=0.1
         )
         self.orchestrator = AITutorOrchestrator(

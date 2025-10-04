@@ -218,7 +218,7 @@ class AITutorOrchestrator:
                 user_info=state["user_info"],
                 chat_history=state["chat_history"],
                 topic=extracted.topic,
-                subject=extracted.subject,
+                subject=extracted.subject or extracted.topic or "General",
                 note_taking_style=extracted.note_taking_style,
                 include_examples=extracted.include_examples,
                 include_analogies=extracted.include_analogies
@@ -252,7 +252,7 @@ class AITutorOrchestrator:
                 topic=extracted.topic,
                 count=extracted.flashcard_count,
                 difficulty=extracted.difficulty,
-                subject=extracted.subject,
+                subject=extracted.subject or extracted.topic or "General",
                 include_examples=extracted.include_examples
             )
             

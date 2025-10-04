@@ -21,7 +21,7 @@ class ParameterExtractor:
     This is the "intelligence" of our orchestrator
     """
     
-    def __init__(self, model_name: str = "gpt-4", temperature: float = 0.1):
+    def __init__(self, model_name: str = "gpt-4o-mini", temperature: float = 0.1):
         """
         Initialize with LLM
         
