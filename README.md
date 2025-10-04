@@ -43,8 +43,8 @@ Response to Student
 
 1. **Clone the repository**
 ```bash
-git clone <your-repo-url>
-cd ai-tutor-orchestrator
+git clone https://github.com/pradeepsingh2025/AI-Tutor-Orchestrator.git
+cd AI-Tutor-Orchestrator
 ```
 
 2. **Create virtual environment**
