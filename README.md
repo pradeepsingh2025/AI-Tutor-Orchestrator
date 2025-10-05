@@ -21,7 +21,7 @@ Student Message
 [FastAPI Endpoint]
       ↓
 [LangGraph Orchestrator]
-      ├─→ [Parameter Extractor] ← Uses GPT-4
+      ├─→ [Parameter Extractor] ← Uses gpt-4o-mini
       ├─→ [Tool Selector]
       └─→ [Tool Integration Layer]
            ├─→ Note Maker API
@@ -37,7 +37,7 @@ Response to Student
 
 - Python 3.11+
 - OpenAI API key
-- pip or poetry
+- pip
 
 ### Installation
 

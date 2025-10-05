@@ -1,7 +1,3 @@
-"""
-FastAPI Application for AI Tutor Orchestrator
-Main entry point for the API server
-"""
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -24,10 +20,6 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-
-# ============================================================================
-# APPLICATION LIFECYCLE
-# ============================================================================
 
 # Global instances (initialized on startup)
 orchestrator: AITutorOrchestrator = None
@@ -80,10 +72,6 @@ async def lifespan(app: FastAPI):
     logger.info("Shutdown complete")
 
 
-# ============================================================================
-# FASTAPI APP INITIALIZATION
-# ============================================================================
-
 app = FastAPI(
     title="AI Tutor Orchestrator",
     description="Intelligent middleware for autonomous educational tool orchestration",
@@ -100,10 +88,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-# ============================================================================
-# API ENDPOINTS
-# ============================================================================
 
 @app.get("/", tags=["Health"])
 async def root():
@@ -253,11 +237,6 @@ async def list_tools():
         ]
     }
 
-
-# ============================================================================
-# ERROR HANDLERS
-# ============================================================================
-
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request, exc: HTTPException):
     """Custom HTTP exception handler"""
@@ -293,10 +272,6 @@ async def general_exception_handler(request, exc: Exception):
         }
     )
 
-
-# ============================================================================
-# RUN SERVER (for development)
-# ============================================================================
 
 if __name__ == "__main__":
     import uvicorn
