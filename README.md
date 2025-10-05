@@ -363,21 +363,6 @@ pip install langgraph==0.0.20
 3. Make your changes
 4. Add tests
 5. Submit a pull request
-
-## 📄 License
-
-MIT License - see LICENSE file for details
-
-## 👥 Authors
-
-Built for the AI Agent Engineering Hackathon
-
-## 🎉 Acknowledgments
-
-- Task requirements provided by the hackathon organizers
-- Educational tool APIs specification
-- LangChain/LangGraph communities
-
 ---
 
 **Need help?** Check the demo script or open an issue!
