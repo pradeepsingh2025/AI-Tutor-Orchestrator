@@ -93,7 +93,7 @@ The AI Tutor Orchestrator is an intelligent middleware system that sits between 
 - `GET /tools`: List available tools
 
 **Technology:**
-- FastAPI 0.109.0
+- FastAPI 0.110.0
 - Uvicorn ASGI server
 - Pydantic for validation
 
@@ -129,7 +129,7 @@ OrchestratorState = {
 5. **format_response**: Create user-friendly response
 
 **Technology:**
-- LangGraph 0.0.20 for workflow management
+- LangGraph 0.2.0 for workflow management
 - Async/await for concurrent operations
 - Type-safe state transitions
 
@@ -178,7 +178,7 @@ Output: {
 
 **Technology:**
 - LangChain 0.3.0
-- OpenAI GPT-4 (via langchain-openai)
+- OpenAI gpt-40-mini (via langchain-openai)
 - Pydantic output parser for structured responses
 - Low temperature (0.1) for deterministic extraction
 
