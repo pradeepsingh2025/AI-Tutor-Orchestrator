@@ -177,7 +177,7 @@ Output: {
 - **Validation**: Ensures parameters meet tool schema requirements
 
 **Technology:**
-- LangChain 0.1.6
+- LangChain 0.3.0
 - OpenAI GPT-4 (via langchain-openai)
 - Pydantic output parser for structured responses
 - Low temperature (0.1) for deterministic extraction
@@ -261,7 +261,7 @@ OrchestratorResponse
 ```
 
 **Technology:**
-- Pydantic 2.6.0
+- Pydantic 2.8.0
 - Automatic validation
 - JSON schema generation
 
