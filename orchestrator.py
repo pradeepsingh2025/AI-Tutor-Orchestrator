@@ -26,19 +26,15 @@ class OrchestratorState(TypedDict):
     This is the "memory" of our orchestration process
     """
 
-    # Input
     message: str
     user_info: UserInfo
     chat_history: list[ChatMessage]
 
-    # Extracted data
     extracted_parameters: ExtractedParameters | None
 
-    # Tool execution
     tool_request: dict | None
     tool_response: dict | None
 
-    # Output
     final_response: OrchestratorResponse | None
     error: str | None
 
@@ -51,10 +47,6 @@ class OrchestratorState(TypedDict):
 
 
 class AITutorOrchestrator:
-    """
-    Main orchestrator that coordinates parameter extraction and tool execution
-    Uses LangGraph for workflow management
-    """
 
     def __init__(
         self,
@@ -62,8 +54,6 @@ class AITutorOrchestrator:
         tool_client: EducationalToolClient,
     ):
         """
-        Initialize orchestrator
-
         Args:
             parameter_extractor: ParameterExtractor instance
             tool_client: EducationalToolClient instance

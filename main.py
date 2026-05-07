@@ -28,7 +28,7 @@ tool_client: EducationalToolClient = None
 @asynccontextmanager
 async def lifespan(app: FastAPI):
 
-    #Lifespan manager:- Handles startup and shutdown events
+    # Lifespan manager:- Handles startup and shutdown events
 
     # Startup
     logger.info("Starting AI Tutor Orchestrator...")
@@ -119,21 +119,7 @@ async def health_check():
     description="Analyzes student message, extracts parameters, and calls appropriate educational tool",
 )
 async def orchestrate_endpoint(request: OrchestrateRequest) -> OrchestratorResponse:
-    """
-    Main orchestration endpoint
-
-    This is the primary API that external systems call.
-    It handles the entire workflow from message analysis to tool execution.
-
-    Args:
-        request: OrchestrateRequest containing message, user_info, and chat_history
-
-    Returns:
-        OrchestratorResponse with tool output or clarification request
-
-    Raises:
-        HTTPException: If orchestration fails
-    """
+    
     try:
         logger.info(
             f"Received orchestration request from user: {request.user_info.user_id}"
@@ -166,12 +152,7 @@ async def orchestrate_endpoint(request: OrchestrateRequest) -> OrchestratorRespo
     description="Test parameter extraction without actually calling tools",
 )
 async def validate_endpoint(request: OrchestrateRequest):
-    """
-    Validation-only endpoint for testing
-
-    Extracts and validates parameters but doesn't call tools.
-    Useful for debugging and testing parameter extraction logic.
-    """
+    
     try:
         logger.info("Validation-only request")
 

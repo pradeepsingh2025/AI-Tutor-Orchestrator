@@ -14,7 +14,8 @@ from enum import Enum
 
 
 class UserInfo(BaseModel):
-    """Student profile information - required by all tools"""
+    
+    # Student profile information - required by all tools
 
     user_id: str = Field(..., description="Unique identifier for the student")
     name: str = Field(..., description="Student's full name")
